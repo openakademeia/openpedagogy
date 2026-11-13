@@ -1,6 +1,6 @@
 # OpenPedagogy
 
-An open protocol for AI-native teaching. A course author writes a book; any conforming tutor (an AI agent or a human) teaches from it, choosing among five techniques by the learner's level, generating exercises, and emitting a standard record. Created with the [openacademy](https://github.com/slow42/openacademy) initiative.
+An open protocol for AI-native teaching. A course author writes a book; any conforming tutor (an AI agent or a human) teaches from it, choosing among five techniques by the learner's level, generating exercises, and emitting a standard record. Created with the [openakademeia](https://github.com/openakademeia/openakademeia) initiative.
 
 **Status:** `0.2.0-draft`, not for implementation. Read [PROTOCOL.md](PROTOCOL.md).
 
