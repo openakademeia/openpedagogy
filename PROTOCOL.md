@@ -321,7 +321,7 @@ Informative. Each rule traces to evidence. Grades: **A** means replicated and sa
 
 # Appendix: MCP binding
 
-Informative. One reference binding, as implemented by openacademy's server and the Plato plugin:
+Informative. One reference binding, as implemented by openakademeia's server and the Plato plugin:
 
 | Tool | Returns / does |
 |---|---|
