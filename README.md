@@ -1,27 +1,25 @@
 # OpenPedagogy
 
-An open specification for AI-native learning by prediction: the learner commits to a prediction with a confidence, sees it break, and gets the concept as the repair. Created with the [openacademy](https://github.com/slow42/openacademy) initiative.
+An open protocol for AI-native teaching. A course author writes a book; any conforming tutor (an AI agent or a human) teaches from it, choosing among five techniques by the learner's level, generating exercises, and emitting a standard record. Created with the [openacademy](https://github.com/slow42/openacademy) initiative.
 
-**Status:** `0.1.0-draft`, not for implementation. Read [SPEC.md](SPEC.md).
+**Status:** `0.2.0-draft`, not for implementation. Read [PROTOCOL.md](PROTOCOL.md).
 
 ## What it defines
 
-| Layer | Spec | Covers |
-|---|---|---|
-| Principles | §4 | 13 learning-science claims, each graded A/B/C by evidence |
-| Content format | §5–6 | Course → flight → lesson files, the lesson section grammar, the book, authoring rules |
-| Tutor protocol | §7–8 | The commit → break → repair loop, branching on confidence × correctness, conduct and engagement limits |
-| Learner record | §9 | The JSON attempt each lesson emits |
+| Part | Covers |
+|---|---|
+| Course format | Any Markdown book (its `##` headings are the sections), plus optional exercises with answers |
+| Tutor protocol | Session flow; learner level; five techniques (worked example, bridge, contrasting cases, predict and reveal, guided derivation); exercises; mastery; review; conduct |
+| Learner record | The JSON attempt emitted per section |
+| Conformance | Tutor evals |
 
-Each layer can be adopted on its own. Any conforming tutor (human or AI) can teach any conforming course.
+The protocol's tutor section is self-contained, so a server or plugin can load it as an agent's instructions.
 
 ## Roadmap
 
-- JSON Schemas for `course.yaml` and the attempt record, plus a content validator (§12.2 gates).
-- The protocol as a versioned document servers return over MCP (§10).
-- `evidence/`: one file per principle, with its grade and last review date.
-- Resolve the blocking open questions (§13): advancement and spaced review.
+- The tutor eval suite: scripted learners that check the protocol's observable behaviors.
+- A first course (linear algebra) in the new format.
 
 ## License (proposed)
 
-Spec text under CC BY 4.0; schemas and validators under MIT. Until the split is finalized, the repository is MIT ([LICENSE](LICENSE)).
+Text under CC BY 4.0; schemas and validators under MIT. Until the split is finalized, the repository is MIT ([LICENSE](LICENSE)).
